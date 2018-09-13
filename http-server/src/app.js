@@ -9,7 +9,7 @@ const fs = require('fs');
 // it will also deal with POST data and append JSON to req.body if sent
 const parser = require('./lib/parser');
 
-const requestHandler = (req,res) => {
+const requestHandler = (req, res) => {
 
   // Take a look here if you're interested to see what some parts of the request object are.
   // console.log('METHOD:', req.method);
@@ -77,6 +77,6 @@ const app = http.createServer(requestHandler);
 
 // Expose the start and stop methods.  index.js will call on these.
 module.exports = {
-  start: (port,callback) => app.listen(port,callback),
+  start: (port, callback) => app.listen(port,callback),
   stop: (callback) => app.close(callback),
 };

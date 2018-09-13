@@ -6,7 +6,7 @@ const queryString = require('querystring');
 
 module.exports = (req) => {
 
-  return new Promise( (resolve,reject) => {
+  return new Promise( (resolve, reject) => {
 
     if( !(req || req.url) ) { reject('Invalid Request Object. Cannot Parse'); }
 
